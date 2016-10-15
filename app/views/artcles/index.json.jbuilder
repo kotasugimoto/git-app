@@ -1,0 +1,1 @@
+json.array! @artcles, partial: 'artcles/artcle', as: :artcle
