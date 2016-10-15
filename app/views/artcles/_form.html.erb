@@ -1,0 +1,29 @@
+<%= form_for(@artcle) do |f| %>
+  <% if @artcle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@artcle.errors.count, "error") %> prohibited this artcle from being saved:</h2>
+
+      <ul>
+      <% @artcle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :auther %><br>
+    <%= f.text_field :auther %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
