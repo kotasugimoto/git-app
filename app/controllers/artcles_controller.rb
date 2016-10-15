@@ -1,28 +1,19 @@
 class ArtclesController < ApplicationController
   before_action :set_artcle, only: [:show, :edit, :update, :destroy]
 
-  # GET /artcles
-  # GET /artcles.json
   def index
     @artcles = Artcle.all
   end
-
-  # GET /artcles/1
-  # GET /artcles/1.json
   def show
   end
 
-  # GET /artcles/new
   def new
     @artcle = Artcle.new
   end
 
-  # GET /artcles/1/edit
   def edit
   end
 
-  # POST /artcles
-  # POST /artcles.json
   def create
     @artcle = Artcle.new(artcle_params)
 
